@@ -11,4 +11,15 @@ get '/users' do
 
 end
 
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :'each_user'
+end
+
+get '/about' do
+
+  erb '<h3>about redmart. it is not blue</h3>'
+
+end
+
 end

@@ -1,0 +1,16 @@
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |t|
+
+      t.string :name, null:false
+      t.string :email, null:false
+      t.string :address, null:false
+      t.string :password, null:false
+      t.integer :cc_number
+
+      t.timestamps
+
+      # add_foreign_key :books
+    end
+  end
+end
