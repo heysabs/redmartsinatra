@@ -8,6 +8,6 @@ class CreateProducts < ActiveRecord::Migration
       t.float :price, null:false
 
       t.timestamps
-
+    end
   end
 end
