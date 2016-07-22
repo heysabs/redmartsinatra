@@ -3,7 +3,7 @@ require 'bundler'
 Bundler.require
 
 #THIS IS THE MODEL
-require './models/user'
+require './models/user' #.erb is not needed
 
 #THIS IS THE CONTROLLER
 require './app'
