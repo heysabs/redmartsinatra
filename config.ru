@@ -5,6 +5,8 @@ Bundler.require
 #THIS IS THE MODEL
 require './models/user' #.erb is not needed
 require './models/product'
+require './models/brand'
+require './models/category'
 
 #THIS IS THE CONTROLLER
 require './app'

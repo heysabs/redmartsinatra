@@ -1,0 +1,30 @@
+<h2>List of Brands</h2>
+
+<table class="table table-striped">
+ <thead>
+   <tr>
+     <th>Brand ID</th>
+     <th>Brand Name</th>
+   </tr>
+ </thead>
+ <tbody>
+   <% @brands.each do |brand| %>
+   <tr>
+     <td>
+       <%= brand[:id] %>
+     </td>
+     <td>
+       <%= brand[:name] %>
+     </td>
+     <td>
+        <a href="/brands/<%= brand[:id]%>">Show</a>
+        <a href="/brands/<%= brand[:id] %>/edit">Edit</a>
+        <form action="/brands/<%= brand[:id]%>" method="post">
+          <input type="hidden" name="_method" value="Delete">
+          <input type="submit" value="Delete">
+        </form>
+     </td>
+   </tr>
+   <% end %>
+ </tbody>
+</table>

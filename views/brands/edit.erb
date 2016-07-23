@@ -1,0 +1,13 @@
+<h3>Edit Brand Info</h3>
+
+<form action="/brands/<%= @brand[:id] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <label>Brand Name
+      <input type="text" name="brand[name]" value="<%= @brand[:name] %>">
+    </label>
+  </div>
+
+  <input type="submit" value="submit">
+</form>
