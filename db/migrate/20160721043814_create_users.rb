@@ -10,7 +10,6 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps
 
-      # add_foreign_key :books
     end
   end
 end

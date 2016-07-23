@@ -1,0 +1,42 @@
+<h2>Products from Redmart DB</h2>
+
+<table class="table table-striped">
+ <thead>
+   <tr>
+     <th>ID</th>
+     <th>Product Name</th>
+     <th>Brand ID</th>
+     <th>Category ID</th>
+     <th>Price</th>
+   </tr>
+ </thead>
+ <tbody>
+   <% @products.each do |product| %>
+   <tr>
+     <td>
+       <%= product[:id] %>
+     </td>
+     <td>
+       <%= product[:name] %>
+     </td>
+     <td>
+       <%= product[:brand_id] %>
+     </td>
+     <td>
+       <%= product[:category_id] %>
+     </td>
+     <td>
+       <%= product[:price] %>
+     </td>
+     <td>
+        <a href="/products/<%= product[:id]%>">Show</a>
+        <a href="/products/<%= product[:id] %>/edit">Edit</a>
+        <form action="/products/<%= product[:id]%>" method="post">
+          <input type="hidden" name="_method" value="Delete">
+          <input type="submit" value="Delete">
+        </form>
+     </td>
+   </tr>
+   <% end %>
+ </tbody>
+</table>
